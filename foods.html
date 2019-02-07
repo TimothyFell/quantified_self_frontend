@@ -3,13 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Quantified Self - Manage Foods</title>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
+      </script>
+      <script type="text/javascript" src="./lib/index.js"></script>
+<script type="text/javascript">
+  window.onload = food.loadFoods();
+</script>
+
+      <script src="main.bundle.js"></script>
   </head>
   <body>
-      <a href="index.html"><button class="default-button">Meal Diary</button></a>
-      <script
-        src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
-      </script>
-      <script src="main.bundle.js"></script>
+    <h1>Manage Foods</h1>
+    <table class='wrapper'>
+
+      <form id="frm1" action="/action_page.php">
+        Food name: <input type="text" name="fname"><br>
+        Calories: <input type="text" name="lname"><br><br>
+        <input type="button" onclick="food.addFood()" value="Add Food">
+      </form>
+    </br>
+      <table class="food_table">
+        <tr>
+          <td>Food Name</td>
+          <td>Calories</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Row2 cell2</td>
+        </tr>
+      </table>
+    </br>
+      <a href="index.html"><button class="default-button">Go Back</button></a>
+
     </div>
   </body>
 </html>
