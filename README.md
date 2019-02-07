@@ -1,79 +1,42 @@
-# Quantified Self Front-end
+# Quantified Self Frontend API
 
-## Initial Setup
+This is a Node.js app that consumes an API we built as a backend service to consume and serve its data to users in this frontend.
 
-1. Clone this starter kit repository and rename the repository to `quantified-self-fe` in one command
 
-  ```shell
-  git clone git@github.com:turingschool-examples/qs-fe-starter-kit.git quantified-self-fe
-  ```
-2. Change into the `quantified-self-fe` directory
+## Setup
 
-3. Remove the default remote (origin)
+### Clone
+As always start by forking the repo, cloning it to your machine and cd-ing into the new repository in your terminal.
 
-  ```shell
-  git remote rm origin
-  ```
+````terminal
+$ git clone git@github.com:TimothyFell/quantified_self_backend.git quantified_self_backend
+$ cd quantified_self_backend
+````
 
-4. Create a new repository on GitHub named `quantified-self-fe`
+### Tech Stack
+We used Node.js to handle simple building out a simple script-based frontend.
 
-5. Add your new repository remote - **your remote URL and user name will be different in the command below**
+### NPM
+Use NPM to install all the required packages.
 
-  ```shell
-  git remote add origin git@github.com:<YOUR GITHUB NAME>/quantified-self-fe.git
-  ```
+````terminal
+$ npm install
+$ npm audit fix
+````
 
-6. Install the dependencies of the starter kit
+## Contributions
 
-  ```shell
-  npm install
-  ```
+If you would like to contribute to this project please fork the repository and send us a pull request with your changes. To get started once you fork, follow the instructions above in the Setup section.
 
-7. Add, commit, and push up to your repository
+## Running Tests
+Now you are ready to run the tests! Use the following command to run all your tests.
 
-  ```shell
-  git add .
-  git commit -m "Initial commit using starter kit"
-  git push origin master
-  ```
+````terminal
+$ npm test
+````
 
-## Running the Server Locally
+or this command to run a specific file or directory.
 
-To see your code in action locally, you need to fire up a development server. Use the command:
-
-```shell
-npm start
-```
-
-Once the server is running, visit in your browser:
-
-* `http://localhost:8080/` to run your application.
-
-You will need to make sure that your Quantified Self API is also running at `http://localhost:3000`
-
-## GitHub Pages Setup
-
-This site will be served from GitHub Pages in production.
-
-In order to see your application running on production:
-
-1. From the command line, run `npm run build`.
-
-2. Commit and push your application to GitHub.
-
-3. Visit your repository on Github
-
-4. Go to Settings
-
-5. Under the Github Pages section of Options, select 'master' as your source and click `Save`
-
-Be sure to `npm run build` and commit before each push to master. A few seconds after you push up, you should be able to see your application at <https://your-github-username.github.io/quantified-self-fe>.
-
-## Built With
-
-* [JavaScript](https://www.javascript.com/)
-* [jQuery](https://jquery.com/)
-* [Express](https://expressjs.com/)
-* [Mocha](https://mochajs.org/)
-* [Chai](https://chaijs.com/)
-
+````terminal
+$ mocha ./spec/path/to/file/or/directory --exit
+````
