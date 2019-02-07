@@ -46,5 +46,22 @@
 
 	"use strict";
 
+	function loadFoods() {
+	  debugger;
+	}
+
+	function serviceRequest() {
+	  fetch("https://shielded-springs-44061.herokuapp.com/api/v1/foods").then(function (response) {
+	    food_objects = JSON.parse(response.body);
+	    loadFoods(food_objects);
+	  }).catch(function (error) {
+	    return "shits fucked";
+	  });
+	}
+
+	$(document).ready(function () {
+	  serviceRequest();
+	});
+
 /***/ })
 /******/ ]);
