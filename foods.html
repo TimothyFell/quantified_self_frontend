@@ -13,7 +13,11 @@
     <header>
       <div class="container">
         <h1>Quantified Self</h1>
-        <a href="index.html">Home</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="foods.html">Foods</a>
+          <a href="diary.html">Diary</a>
+        </nav>
       </div>
     </header>
     <div class="container">
@@ -22,21 +26,25 @@
         <div class="add-food">
           <h3>Add a Food!</h3>
           <form id="frm1" action="/action_page.php">
-            <label for="foodName">Food name: </label>
-            <input type="text" name="foodName">
-            <label for="">Calories: </label>
-            <input type="text" name="calories">
+            <div class="labels">
+              <label for="foodName">Food name: </label>
+              <label for="">Calories: </label>
+            </div>
+            <div class="inputs">
+              <input type="text" name="foodName" placeholder="Potatoir">
+              <input type="text" name="calories" placeholder="86">
+            </div>
             <input type="button" class="add_food" value="Add Food">
           </form>
         </div>
         <div class="foods">
           <h3>Foods</h3>
-          <table class="food_table">
-            <thead>
-              <th>Food Name</th>
-              <th>Calories</th>
-            </thead>
-          </table>
+          <div class="food_table">
+            <div>
+              <h3>Food Name</h3>
+              <h3>Calories</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
