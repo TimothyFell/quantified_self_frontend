@@ -1,1 +1,55 @@
-
+.add-food,.foods {
+  width: 50%;
+  padding: 0 20px 20px 0;
+}
+.labels, .inputs {
+  display:flex;
+  justify-content: space-between;
+  padding:5px 0;
+}
+.labels label {
+  width:48%;
+  text-align: left;
+  font-weight: bold;
+  font-size:1.25em;
+}
+.inputs input {
+  width:48%;
+  line-height:2;
+  outline:none;
+  border:2px solid #666;
+  font-size:1.2em;
+}
+.add_food {
+  background-color: #F86464;
+  padding: 10px 30px;
+  border: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  transition:all 0.2s ease-in-out;
+  color: white;
+}
+.add_food:hover {
+  background-color:#F6ADAD;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out;
+}
+.food_table {
+  background-color:#666;
+  padding:10px 20px;
+  color:white;
+}
+.food_table > div {
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+.food_table > div:last-child {
+  border-bottom: none;
+}
+.food_table h3, .food_table p {
+  width: 50%;
+  text-align: left;
+  margin: 0;
+  padding: 10px 0 5px;
+}
