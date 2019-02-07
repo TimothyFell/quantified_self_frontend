@@ -111,7 +111,6 @@
 	  // (".add_food").addEventListener("click", function () {
 	  //   addFood();
 	});
-	// event listener for submit button that calls a function!
 
 /***/ })
 /******/ ]);

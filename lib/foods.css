@@ -1,1 +1,14 @@
-
+.add-food,.foods {
+  width:50%;
+  padding:20px;
+}
+td, th {
+  padding:0 15px;
+  text-align:left;
+}
+tr {
+    line-height: 2em;
+}
+thead {
+  border-bottom:1px solid #aaa;
+}

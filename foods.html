@@ -3,29 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Quantified Self - Manage Foods</title>
-      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
-      </script>
-      <script src="main.bundle.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="./lib/global.css" rel="stylesheet">
+    <link href="./lib/foods.css" rel="stylesheet">
+    <script src="main.bundle.js"></script>
   </head>
   <body>
-    <h1>Manage Foods</h1>
-    <table class='wrapper'>
-
-      <form id="frm1" action="/action_page.php">
-        Food name: <input type="text" name="foodName"><br>
-        Calories: <input type="text" name="calories"><br><br>
-        <input type="button" class="add_food" value="Add Food">
-      </form>
-    </br>
-      <table class="food_table">
-        <tr>
-          <td>Food Name</td>
-          <td>Calories</td>
-        </tr>
-      </table>
-    </br>
-      <a href="index.html"><button class="default-button">Go Back</button></a>
-
+    <header>
+      <div class="container">
+        <h1>Quantified Self</h1>
+        <a href="index.html">Home</a>
+      </div>
+    </header>
+    <div class="container">
+      <h2>Manage Foods</h2>
+      <div class="columns">
+        <div class="add-food">
+          <h3>Add a Food!</h3>
+          <form id="frm1" action="/action_page.php">
+            <label for="foodName">Food name: </label>
+            <input type="text" name="foodName">
+            <label for="">Calories: </label>
+            <input type="text" name="calories">
+            <input type="button" class="add_food" value="Add Food">
+          </form>
+        </div>
+        <div class="foods">
+          <h3>Foods</h3>
+          <table class="food_table">
+            <thead>
+              <th>Food Name</th>
+              <th>Calories</th>
+            </thead>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>
