@@ -55,14 +55,14 @@
 	function loadMeals(meal_objects) {
 	  meal_objects.forEach(function (meal) {
 	    console.log(meal);
-	    $('.meal_table').append('<div>\n      <p>' + meal.meal_type + '</p>\n      </div>');
+	    $('.meal_table').append('<div>\n      <p>' + meal.name + '</p>\n      </div>');
 	  });
 	}
 
 	function mealsRequest(method, id) {
 	  fetch("https://shielded-springs-44061.herokuapp.com/api/v1/meals").then(function (response) {
 	    response.json().then(function (meals_json) {
-	      var meal_objects = JSON.parse(meals_json);
+	      var meal_objects = meals_json;
 	      loadMeals(meal_objects);
 	    });
 	  }).catch(function (error) {
@@ -91,16 +91,6 @@
 	  });
 	};
 
-	function mealService(id, method, body) {
-	  return fetch("https://shielded-springs-44061.herokuapp.com/api/v1/meals/" + id, {
-	    method: '' + method,
-	    headers: {
-	      'Content-Type': 'application/json'
-	    },
-	    body: JSON.stringify(body)
-	  });
-	};
-
 	function addFood() {
 	  var foodName = $('input[name="foodName"]').val();
 	  var calories = $('input[name="calories"]').val();
@@ -120,24 +110,26 @@
 	  });
 	};
 
-	function addMeal() {
-	  var mealType = $('input[name="mealType"]').val();
-	  var foodName = $('input[name="foodName"]').val();
-	  // do the post
+	// function addMeal () {
+	//   var mealType = $('input[name="mealType"]').val();
+	//   var foodName = $('input[name="foodName"]').val();
+	//   // do the post
 
-	  mealService('', 'POST', {
-	    food_name: foodName,
-	    meal_type: mealType
-	  }).then(function (response) {
-	    console.log(response);
-	    window.location.href = window.location.href;
-	    return handleResponse(response);
-	  }).catch(function (error) {
-	    return console.error({
-	      error: error
-	    });
-	  });
-	};
+	//   mealService('', 'POST', {
+	//     food_name: foodName,
+	//     meal_type: mealType
+	//   }).then(function (response) {
+	//     console.log(response)
+	//     window.location.href = window.location.href;
+	//     return handleResponse(response);
+	//   }).catch(function (error) {
+	//     return console.error({
+	//       error: error
+	//     });
+	//   });
+
+	//   };
+
 
 	function handleResponse(response) {
 	  return response.json().then(function (json) {
@@ -157,7 +149,7 @@
 	  getRequest();
 	  mealsRequest();
 	  document.querySelector(".add_food").addEventListener('click', addFood);
-	  document.querySelector(".add_meal").addEventListener('click', addFood);
+	  // document.querySelector(".add_meal").addEventListener('click', addFood);
 	});
 
 /***/ })
